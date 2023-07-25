@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Illuminate Puzzle</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .grid-container {
+        width: 50%;
+        float: left;
+        display: inline-grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+        /*gap: 20px 20px;*/
+        border: 1px solid white;
+        padding: 5px;
+        
+      }
+      .lightbox {
+        width: 4.9vw;
+        height: 4.9vw;
+        /*margin: auto;*/
+      }
+      .lightbutton {
+        border: 1px solid white;
+        height: 4.9vw;
+        width: 4.9vw;
+      }
+      #sidebar {
+        display: inline;
+        width: 47%;
+        float: right;
+        text-align: center;
+        background-color: white; /*hsl(60, 83%, 62%);*/
+        color: black;
+        height: 49.9vw;
+      }
+      #sidebar > h1 {
+        font-size: 5vw;
+        line-height: 0.2em;
+      }
+      .divider {
+        display: inline;
+        font-size: 3vw;
+      }
+      h3 {
+        text-align: left;
+        margin-left: 8%;
+        font-size: 3vw;
+        display: inline;
+        line-height: 20%;
+      }
+      .instructions {
+        display: inline;
+        font-size: 2vw;
+        line-height: 150%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container" id="main"></div>
+    
+    <div id="sidebar">
+      <h1 id="title">Illuminate - Random</h1>
+      <p class="divider">--------------------------------------</p>
+      <br><br>
+      <p class="instructions">
+        Click the bulbs and illuminate,<br>
+        Sounds easy right, but oh, just wait.<br>
+        Surrounding bulbs will also shine,<br>
+        The solution will be yours to find.<br>
+        <br><br><br></p>
+      <h3>Lights Activated:</h3><h3 id="lit"></h3><br>
+      <br><br><br>
+      <h3>Lights Remaining:</h3><h3 id="unlit"></h3><br><br><br>
+    </div>
+    <script src="illuminate.js"></script>
+  </body>
+</html>
